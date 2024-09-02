@@ -97,7 +97,10 @@ class M5_STHS34PF80 {
     int32_t getMotionValue(int16_t *motionVal);  // Returns the motion value
 
     /**
-     * @brief This function returns the temeparture data in degrees C
+     * @brief This function returns the temeparture data.......
+     * Note:the data obtained by this function is
+     * infrared radiation, which cannot be converted into the actual object temperature. The measured value is relative
+     * to the local temperature, and the measurement result may be negative.
      * @param tempVal Value to fill with information
      * @return int32_t Error code (0 no error)
      */
