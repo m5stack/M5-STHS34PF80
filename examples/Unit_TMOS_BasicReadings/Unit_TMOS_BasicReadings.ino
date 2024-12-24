@@ -102,7 +102,7 @@ void loop() {
         // Output only if presence/motion is detected
         if (status.pres_flag == 1) {
             TMOS.getPresenceValue(&presenceVal);
-            Serial.printf("Prescence Detected!  PrescenceValue:%\n", presenceVal);
+            Serial.printf("Prescence Detected!  PrescenceValue:%d\n", presenceVal);
         }
 
         if (status.mot_flag == 1) {
