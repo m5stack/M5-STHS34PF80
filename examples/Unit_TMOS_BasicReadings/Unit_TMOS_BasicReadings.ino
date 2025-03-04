@@ -48,7 +48,7 @@ void setup() {
     }
 
     Serial.println("Open the Serial Plotter for graphical viewing");
-    TMOS.setTmosODR(STHS34PF80_TMOS_ODR_AT_2Hz);
+    TMOS.setTmosODR(STHS34PF80_TMOS_ODR_AT_30Hz);
     // TMOS.setMotionThreshold(0xFF);
     TMOS.setPresenceThreshold(0xC8);  // Default value
     TMOS.setMotionThreshold(0xC8);
@@ -59,9 +59,9 @@ void setup() {
     // TMOS.setGainMode(STHS34PF80_GAIN_DEFAULT_MODE);
 
     // Decreasing gain mode, detection distance decreases
-    TMOS.setGainMode(STHS34PF80_GAIN_WIDE_MODE);
-    TMOS.setTmosSensitivity(0xff);
-    TMOS.resetAlgo();
+    // TMOS.setGainMode(STHS34PF80_GAIN_WIDE_MODE);
+    // TMOS.setTmosSensitivity(0xff);
+    // TMOS.resetAlgo();
 
     TMOS.getGainMode(&gainMode);
     TMOS.getMotionThreshold(&motionThresholdVal);
